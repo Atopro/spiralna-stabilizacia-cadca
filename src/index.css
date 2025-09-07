@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './styles/animations.css';
+
+/* Brand CSS Variables */
+:root {
+  --brand-navy: #0E3C61;
+  --brand-aqua: #00C6A7;
+  --brand-mint: #9BE15D;
+  --brand-light: #F8FAFC;
+  --brand-slate: #334155;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply min-h-screen overflow-x-hidden;
+    background: linear-gradient(135deg, #0E3C61 0%, #00C6A7 100%);
+    background-attachment: fixed;
+  }
+}
+
+/* Utility Classes */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-2xl bg-[#00C6A7] text-white px-5 py-3 font-semibold shadow-sm transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00C6A7]/50;
+  }
+  
+  .section {
+    @apply relative;
+  }
+  
+  .section-hero {
+    @apply relative isolate overflow-hidden rounded-3xl text-white bg-gradient-to-br from-[#0E3C61] to-[#00C6A7];
+  }
+  
+  .card {
+    @apply bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+}
+
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
