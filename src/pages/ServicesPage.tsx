@@ -63,7 +63,7 @@ const equipment = [
   {
     titleKey: 'services.sport.elastic.title',
     descriptionKey: 'services.sport.elastic.desc',
-    image: '/assets/images/elasticke-lano-image.png'
+    image: '/assets/images/lano-sport-image.png'
   },
   {
     titleKey: 'services.pad.title',
